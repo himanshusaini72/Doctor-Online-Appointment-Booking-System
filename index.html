@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEDWIN - Doctor Online Appointment Booking System</title>
     <link rel="stylesheet" href="style.css">
+    <script src="srcipt.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar animated">
+    <nav class="navbar">
         <div class="nav-content">
             <div class="logo">MEDWIN</div>
             <ul class="nav-menu" id="navMenu">
@@ -38,7 +39,7 @@
             <div class="booking-container">
                 <div class="booking-form animate-on-scroll animated">
                     <h3>BOOK APPOINTMENT</h3>
-                    <form>
+                    <form action="book.php" method="POST">
                         <div class="form-group">
                             <label for="name">Patient's Name</label>
                             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -122,11 +123,12 @@
                         <p><strong>If you need assistance with booking your appointment, please contact us:</strong></p>
                         <div class="contact-item">
                             <span class="icon">📞</span>
-                            <span>+91 7252844411</span>
+                            <a href="tel:+917252844411" style="color: inherit; text-decoration: none;">+91 7252844411</a>
+
                         </div>
                         <div class="contact-item">
                             <span class="icon">✉️</span>
-                            <span>himanshusaini1407@gmail.com</span>
+                            <span><a href="mailto:himanshusaini1407@gmail.com">himanshusaini1407@gmail.com</a></span>
                         </div>
                         <div class="contact-item">
                             <span class="icon">⏰</span>
@@ -143,7 +145,7 @@
         <div class="container">
             <h2 class="section-title animate-on-scroll animated">Why Choose Us</h2>
             <div class="features-grid">
-                <div class="feature-card animate-on-scroll animated">
+                <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">👨‍⚕️</div>
                     <h3>Expert Doctors</h3>
                     <p>Our team consists of highly qualified and experienced medical professionals.</p>
@@ -153,12 +155,12 @@
                     <h3>24/7 Services</h3>
                     <p>Emergency medical services available round the clock for your needs.</p>
                 </div>
-                <div class="feature-card animate-on-scroll animated">
+                <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">💻</div>
                     <h3>Online Booking</h3>
                     <p>Easy and convenient appointment booking from the comfort of your home.</p>
                 </div>
-                <div class="feature-card animate-on-scroll animated">
+                <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">📋</div>
                     <h3>Medical Records</h3>
                     <p>Secure storage and easy access to your complete medical history.</p>
@@ -196,13 +198,15 @@
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <p>123 Medical Center Road<br>City Name, State - 123456</p>
-                    <p>Email: abc@gmail.com</p>
-                    <p>Phone: 7252844411</p>
+                    <p>Email:<a href="mailto:himanshusaini1407@gmail.com">himanshusaini1407@gmail.com</a></p>
+                    <p>Contact No: <a href="tel:+917252844411" style="color: inherit; text-decoration: none;">+91 7252844411</a></p>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom animate-on-scroll">
                 <p>&copy; 2024 MEDWIN. All rights reserved.</p>
+                <p class="developer-name">Developed by <strong>Himanshu Saini</strong></p>
             </div>
+
         </div>
     </footer>
 </body>
