@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDWIN - Doctor Online Appointment Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">MEDWIN</div>
+            <ul class="nav-menu" id="navMenu">
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>DOCTORS</li>
+                <li>SERVICES</li>
+                <li>CONTACT</li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://www.shutterstock.com/image-photo/smiling-doctor-checking-childs-lungs-600nw-2119548194.jpg" alt="Doctor with patient" class="hero-bg">
+        <div class="hero-content">
+            <h1 class="hero-title">WE CARE FOR YOU</h1>
+            <p class="hero-subtitle">Professional Healthcare Services at Your Fingertips</p>
+            <a href="#booking" class="cta-button">Book Appointment Now</a>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-form animate-on-scroll">
+                    <h3>BOOK APPOINTMENT</h3>
+                    <form action="book.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Patient's Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Patient's Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor">Select Doctor</label>
+                            <select id="doctor" name="doctor" required>
+                                <option value="" disabled selected>Choose a Doctor</option>
+                                <option value="dr-sharma">Dr. Sharma (Cardiologist)</option>
+                                <option value="dr-patel">Dr. Patel (Neurologist)</option>
+                                <option value="dr-saini">Dr. Saini (Dermatologist)</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Appointment Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time</label>
+                                <select id="time" name="time" required>
+                                    <option value="" disabled selected>Select Time</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Visit</label>
+                            <textarea id="reason" name="reason" rows="3" placeholder="Briefly describe your symptoms or reason for appointment"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Book Appointment</button>
+                    </form>
+                </div>
+
+                <div class="booking-info animate-on-scroll">
+                    <div class="info-card">
+                        <h3>Available Time Slots</h3>
+                        <div class="time-slots">
+                            <div class="date-header">Today</div>
+                            <div class="slot available">09:00 AM</div>
+                            <div class="slot booked">10:00 AM</div>
+                            <div class="slot available">11:00 AM</div>
+                            <div class="slot booked">12:00 PM</div>
+                            <div class="date-header">Tomorrow</div>
+                            <div class="slot available">09:00 AM</div>
+                            <div class="slot booked">10:00 AM</div>
+                            <div class="slot available">11:00 AM</div>
+                            <div class="slot booked">12:00 PM</div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <span class="dot available"></span> Available
+                            </div>
+                            <div class="legend-item">
+                                <span class="dot booked"></span> Booked
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Need Help?</h3>
+                        <p><strong>If you need assistance with booking your appointment, please contact us:</strong></p>
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <span>+91 7252844411</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">✉️</span>
+                            <span>himanshusaini1407@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">⏰</span>
+                            <span>Mon-Sat: 08:00 AM - 08:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">👨‍⚕️</div>
+                    <h3>Expert Doctors</h3>
+                    <p>Our team consists of highly qualified and experienced medical professionals.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🕒</div>
+                    <h3>24/7 Services</h3>
+                    <p>Emergency medical services available round the clock for your needs.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">💻</div>
+                    <h3>Online Booking</h3>
+                    <p>Easy and convenient appointment booking from the comfort of your home.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">📋</div>
+                    <h3>Medical Records</h3>
+                    <p>Secure storage and easy access to your complete medical history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MEDWIN</h3>
+                    <p>Your health is our priority. We provide comprehensive healthcare services with a focus on patient care and satisfaction.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">General Checkup</a></li>
+                        <li><a href="#">Cardiology</a></li>
+                        <li><a href="#">Neurology</a></li>
+                        <li><a href="#">Dermatology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Medical Center Road<br>City Name, State - 123456</p>
+                    <p>Email: abc@gmail.com</p>
+                    <p>Phone: 0987654321</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MEDWIN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
